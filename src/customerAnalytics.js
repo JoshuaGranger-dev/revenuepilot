@@ -1,21 +1,3 @@
-const assert = require("node:assert/strict");
-const customers = [
-    { id: 101, name: "Alpha Fitness", industry: "Fitness" },
-    { id: 102, name: "Bright Dental", industry: "Healthcare" },
-    { id: 103, name: "Core Athletics", industry: "Fitness" },
-    { id: 104, name: "Delta Tech", industry: "Technology" }
-];
-
-const transactions = [
-    { id: 1, customerId: 101, amount: 500, status: "completed" },
-    { id: 2, customerId: 102, amount: 800, status: "completed" },
-    { id: 3, customerId: 101, amount: 300, status: "completed" },
-    { id: 4, customerId: 103, amount: 1200, status: "pending" },
-    { id: 5, customerId: 103, amount: 600, status: "completed" },
-    { id: 6, customerId: 102, amount: 200, status: "completed" },
-    { id: 7, customerId: 104, amount: 950, status: "completed" }
-];
-
 function getTopCustomers(customers, transactions, limit) {
     if (!customers || !transactions || customers.length === 0 || transactions.length === 0) {
         return [];
